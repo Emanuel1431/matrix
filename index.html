@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matriz</title>
+</head>
+<body>
+    <button onclick="Executar();">
+    Executar
+    </button>
+    <div id="resposta"></div>
+</body>
+<script>
+    function Executar()
+    {
+        matriz_A = [
+                     [10,9,6],
+                     [3,1,0 ],
+                     [4,7,20]
+                    ]
+        menor = matriz_A[0][0]
+        soma = 0
+        contador = 0
+        for(linha=0;linha<=2;linha++)
+        {
+            for(coluna=0;coluna<=2;coluna++)
+            {
+                soma = soma + matriz_A[linha][coluna]
+            contador = contador + 1
+                if(menor > matriz_A[linha][coluna])
+                {
+                    menor = matriz_A[linha][coluna]
+                }
+            }
+        }
+        // trocar a resposta pra menor para mostrar o menor valor ou trocar todos os menor e o sinal de < por maior e >
+        resposta.innerHTML = soma/contador
+    }
+</script>
+</html>
